@@ -9,3 +9,19 @@ b) O(n^2) - We've got two loops in this code which runs a total of `n * n` times
 c) O(n) - Being a recursive function the time taken to execute the function call is `n` and given the amount of operations in the call as 3 `=, +, and -` all being term as constant operations, it's agreeable that we have a worst case scenario of `O(n)`.
 
 ## Exercise II
+
+[]: # n-story building with infinity eggs
+[]: # eggs thrown from floors >= f gets broken
+[]: # eggs thrown from floors < f don't get broken
+[]: # how can you determine value of f such that the number of dropped + broken eggs is minimized?
+
+#### Answer
+
+- Assuming the eggs are currently of floor f, the likeliness of the eggs to drop and get broken is high
+- The only way to minimize the number of dropped + broken eggs is to get to the floor below f
+
+-- Given a number `n` of floors
+-- Count the floors and for every floor we get to, if we are on floors that are below floor `f`, we are allowed to carry eggs
+-- If we get to floor `f` or any floor greater than floor `f` we will `not` be allowed to carry eggs.
+-- To move to floors greater than or equals to `f` you must drop the eggs on any of the previous floors lower than `f`.
+-- This is significantly control how the eggs are carried and prevent eggs being broken when dropped
