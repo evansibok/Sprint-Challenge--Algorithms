@@ -20,8 +20,14 @@ c) O(n) - Being a recursive function the time taken to execute the function call
 - Assuming the eggs are currently of floor f, the likeliness of the eggs to drop and get broken is high
 - The only way to minimize the number of dropped + broken eggs is to get to the floor below f
 
--- Given a number `n` of floors
+-- Given a number `n` of floors - `defined number of floors is a constant (1)`
 -- Count the floors and for every floor we get to, if we are on floors that are below floor `f`, we are allowed to carry eggs
--- If we get to floor `f` or any floor greater than floor `f` we will `not` be allowed to carry eggs.
+-- If we get to floor `f` or any floor greater than floor `f` we will `not` be allowed to carry eggs. - `Having an ability to count the count the floors (n) times`
 -- To move to floors greater than or equals to `f` you must drop the eggs on any of the previous floors lower than `f`.
 -- This is significantly control how the eggs are carried and prevent eggs being broken when dropped
+
+`n` constant number of floors = 1
+`count` floors `n` number of times = n
+base condition where eggs can be carried and dropped
+
+The runtime complexity looks likely to be `O(n)`.
