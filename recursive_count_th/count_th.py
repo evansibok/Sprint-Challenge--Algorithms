@@ -3,9 +3,6 @@ Your function should take in a single parameter (a string `word`)
 Your function should return a count of how many occurences of ***"th"*** occur within `word`. Case matters.
 Your function must utilize recursion. It cannot contain any loops.
 '''
-# this_word = "asthrethanldTHth"
-# this_word = ""
-# this_word = "Yup"
 
 # Function should take in a string of words
 # Must return a count of how the total number of times *th* occurs within the input.
@@ -21,7 +18,6 @@ Your function must utilize recursion. It cannot contain any loops.
 # 2. If string has one character return 0
 # 3. If char at current index + char at current+1 equals phrase count
 # 4. move forward one iteration and start from 3 above
-# if
 
 
 def count_th(word):
@@ -35,10 +31,3 @@ def count_th(word):
         return 1 + count_th(word[1:])
     else:
         return count_th(word[1:])
-
-
-# print(count_th(this_word))
-# print('length', len(this_word))
-# print("word[:2] == 'th'", this_word[:2])
-# print("word[:2] != 'th'", this_word[1:])
-# print("word[1:]", this_word[1:])
