@@ -123,7 +123,55 @@ class SortingRobot:
         # 4. after moving right, the robot can compare the item it has with the item in the front of the list
         # 5. If the item in front is less than the item to the left, it should swap the item
 
-        pass
+        # self.set_light_on()
+
+        # while self.light_is_on():
+
+        #     while self.can_move_right():
+        #         self.move_right()
+
+        #         if self.compare_item() == 1:
+        #             self.swap_item()
+
+        #     if self.can_move_left() and self.compare_item() is not None:
+        #         self.move_left()
+        #         self.swap_item()
+
+        #     if not self.can_move_right():
+        #         self.set_light_off()
+
+        # Base case
+        # If robot can't move to the right, end the condition
+        if not self.can_move_right():
+            pass
+
+        # Else, if the robot can move to the right
+        #       -> Swap items
+        else:
+            self.swap_item()
+
+        # While the robot can move to the right, move the robot to the right
+        #       -> compare the list items
+        #   -> If the item in hand is greater than the current item in the list
+        #       -> swap item
+            while self.can_move_right():
+                self.move_right()
+                self.compare_item()
+                if self.compare_item() == 1:
+                    self.swap_item()
+
+        # While the robot has something to compare
+        #       -> move the robot to the left
+            while self.compare_item() is not None:
+                self.move_left()
+
+        # Swap items and move right.
+        # return the sort inside the else
+            self.swap_item()
+            self.move_right()
+            return self.sort()
+
+        # pass
 
 
 if __name__ == "__main__":
